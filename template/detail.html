@@ -1,0 +1,19 @@
+{% extends './index.html' %}
+
+{% block content %}
+
+  <h3>{{object.name}}</h3>
+
+  <p>{{object.propost}}</p>
+
+  <p>Sim: {{object.up}}  --  Não: {{object.down}}</p>
+
+  
+
+  <h4>Comentarios:</h4>
+  {% for comentarios in comment %}
+    {% if comentarios.id_prop == object %}
+      <p>{{comentarios.comment}}</p>
+      {% endif %}
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends './index.html' %}
+{% block content %}
+<div>
+	{% for obj in object_list %}
+		<a href="{% url 'poll:propose-detail' obj.pk %}"><h1>{{ obj.name }}</h1></a>
+		{{ obj.propost }}
+		
+	{% endfor %}
+</div>
+{% endblock %}
